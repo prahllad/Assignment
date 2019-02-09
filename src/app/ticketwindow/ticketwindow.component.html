@@ -1,0 +1,28 @@
+<div>
+    <h1 class="center">Movie Ticket Book window</h1>
+    <h3 class="center">Please select your seat to book</h3>
+    <input type="radio" name="radio1" checked  value="1" (change)="switchscreen($event.target.value)">Audi 1(show1)
+    <input type="radio" name="radio1" value="2" (change)="switchscreen($event.target.value)">Audi 2(show2)
+    <input type="radio" name="radio1" value="3" (change)="switchscreen($event.target.value)">Audi 3(show3)<br>
+    <div class="center">
+        <table class="table">
+            <tr>
+                <th>Platinum.Rs-320.00</th>
+                <td *ngFor="let col of selectedAudi.platinum"><button *ngIf="col!==''">{{col.name}}</button></td>
+            </tr>
+            <tr>
+                <th>Gold,Rs-280.00</th>
+                <td *ngFor="let col of selectedAudi.gold"><button *ngIf="col!==''">{{col.name}}</button></td>
+            </tr>
+            <tr>
+                <th>Silver,Rs-240.00</th>
+                <td *ngFor="let col of selectedAudi.silver"><button *ngIf="col!==''">{{col.name}}</button></td>
+
+            </tr>
+            
+
+        </table>
+        <p>Price:<input type="text" name="price"></p>
+        <button>confirm to book</button>
+    </div>
+</div>

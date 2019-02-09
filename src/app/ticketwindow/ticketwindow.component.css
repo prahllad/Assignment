@@ -1,0 +1,18 @@
+.center{
+    text-align: center;
+   
+}
+.table{
+    border: 2px;
+    height: 50%;
+    width: 50%;
+    border-spacing: 10px;
+    border-collapse: separate;
+    left: 50%;
+    padding-left: 30%;
+    
+}
+.color{
+    background-color: aqua;
+    
+}

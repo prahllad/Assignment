@@ -16,3 +16,8 @@
     background-color: aqua;
     
 }
+.button{
+    background-color: antiquewhite;
+    border-radius: 0.5px;
+    cursor: pointer;
+}

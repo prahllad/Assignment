@@ -8,6 +8,7 @@ import {bookinghelper} from '../helper/helper';
 export class TicketWindowComponent {
     selectedAudi:any;
     seats:any = [];
+    totalPrice :any = 0;
     
    constructor(private bookingHelper : bookinghelper){
        
@@ -19,6 +20,12 @@ export class TicketWindowComponent {
    switchscreen(data){
     
         this.selectedAudi = this.seats[data];
+
+   }
+   bookseat(price,seat){
+       this.totalPrice = Number(price) + this.totalPrice;
+       
+
 
    }
   

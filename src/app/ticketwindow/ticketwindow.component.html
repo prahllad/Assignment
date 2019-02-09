@@ -8,21 +8,21 @@
         <table class="table">
             <tr>
                 <th>Platinum.Rs-320.00</th>
-                <td *ngFor="let col of selectedAudi.platinum"><button *ngIf="col!==''">{{col.name}}</button></td>
+                <td *ngFor="let col of selectedAudi.platinum"><button class="button" [disabled]="col.booked" (click)="bookseat('320',$event.target.value)" *ngIf="col!==''">{{col.name}}</button></td>
             </tr>
             <tr>
                 <th>Gold,Rs-280.00</th>
-                <td *ngFor="let col of selectedAudi.gold"><button *ngIf="col!==''">{{col.name}}</button></td>
+                <td *ngFor="let col of selectedAudi.gold"><button class="button"  [disabled]="col.booked" (click)="bookseat('280',$event.target.value)" *ngIf="col!==''">{{col.name}}</button></td>
             </tr>
             <tr>
                 <th>Silver,Rs-240.00</th>
-                <td *ngFor="let col of selectedAudi.silver"><button *ngIf="col!==''">{{col.name}}</button></td>
+                <td *ngFor="let col of selectedAudi.silver"><button class="button"[disabled]="col.booked" (click)="bookseat('240',$event.target.value)" *ngIf="col!==''">{{col.name}}</button></td>
 
             </tr>
             
 
         </table>
-        <p>Price:<input type="text" name="price"></p>
+        <p>Price:<input type="number" name="price" [(ngModel)]="totalPrice"></p>
         <button>confirm to book</button>
     </div>
 </div>
